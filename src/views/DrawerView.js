@@ -65,6 +65,13 @@ export default class DrawerView extends React.PureComponent {
     });
   };
 
+  _handleDrawerSlide = () => {
+    this.props.navigation.dispatch({
+      type: 'Navigation/SLIDE_DRAWER',
+      key: this.props.navigation.state.key,
+    });
+  };
+
   _updateWidth = () => {
     const drawerWidth =
       typeof this.props.navigationConfig.drawerWidth === 'function'
@@ -114,6 +121,7 @@ export default class DrawerView extends React.PureComponent {
         drawerWidth={this.state.drawerWidth}
         onDrawerOpen={this._handleDrawerOpen}
         onDrawerClose={this._handleDrawerClose}
+        onDrawerSlide={this._handleDrawerSlide}
         useNativeAnimations={this.props.navigationConfig.useNativeAnimations}
         renderNavigationView={this._renderNavigationView}
         drawerPosition={

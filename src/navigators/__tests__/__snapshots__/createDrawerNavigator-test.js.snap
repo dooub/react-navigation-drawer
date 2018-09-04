@@ -8,6 +8,7 @@ exports[`createDrawerNavigator renders successfully 1`] = `
   drawerWidth={320}
   onDrawerClose={[Function]}
   onDrawerOpen={[Function]}
+  onDrawerSlide={[Function]}
   renderNavigationView={[Function]}
   useNativeAnimations={true}
 >
